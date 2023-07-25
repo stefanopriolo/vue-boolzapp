@@ -88,7 +88,8 @@ const app = Vue.createApp({
 
   methods: {
     onUserClick(singleContact) {
-      this.currectContact = singleContact;
+      this.currentContact = singleContact;
+      console.log(singleContact);
     },
   },
 });

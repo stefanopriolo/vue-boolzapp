@@ -67,4 +67,25 @@
     background-image: url(/imgs/mine.jpg);
 }
 
+.single-message-wrapper {
+display: flex;
+}
 
+.message-baloon {
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    display: inline-block;
+    min-width: 200px;
+}
+
+
+.message-baloon.sent {
+    margin-left: auto;
+    background-color: #d5f9ba ;
+    }
+
+
+.message-baloon.received {
+    align-self: flex-start;
+    }

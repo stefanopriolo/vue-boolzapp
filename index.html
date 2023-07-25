@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Background general -->
+      <div class="container-bg p-4 ps-5 pe-5">
+        <!-- Container general -->
+        <div class="container d-flex position-container">
+          <!-- Sidebar -->
+          <div class="side-bar">
+            <!-- Block #1 Sofia + icons -->
+            <div
+              class="user-bar border d-flex align-items-center justify-content-between bg-color-sideuser p-2"
+            >
+              <!-- Photo + Name   -->
+              <div class="name">
+                <img
+                  src="./imgs/avatar_io.jpg"
+                  alt="avatar"
+                  class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                  width="60"
+                />
+                <span><strong>Sofia</strong></span>
+              </div>
+              <!-- Icons -->
+              <div class="icon d-flex gap-3 pe-3 icon-size">
+                <i class="fa-solid fa-circle-notch" style="color: #b0b0b0"></i>
+                <i class="fa-solid fa-message" style="color: #b0b0b0"></i>
+                <i
+                  class="fa-solid fa-ellipsis-vertical"
+                  style="color: #b0b0b0"
+                ></i>
+              </div>
+            </div>
+            <!-- Block #2 new message -->
+            <div class="container bg-blue p-3 d-flex gap-3 align-items-center">
+              <div class="icon-bell">
+                <i
+                  class="fa-solid fa-bell-slash p-3"
+                  style="color: #8edafd"
+                ></i>
+              </div>
+              <div class="notification-text">
+                <span><strong>Ricevi notifiche di nuovi messaggi</strong></span>
+                <br />
+                <a class="link-notification" href=""
+                  >Attiva notifiche desktop</a
+                >
+              </div>
+            </div>
+            <!-- Block #3 Search Bar -->
+            <div class="container bg-white p-2 d-flex gap-1">
+              <button type="button" class="btn border">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #b0b0b0"
+                ></i>
+              </button>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cerca o inizia una nuova chat"
+                aria-label="Search"
+              />
+            </div>
+            <!-- Block #4 Chat -->
+            <div class="container bg-white overflow-auto size-chat-container">
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+
+              <!-- card chat   -->
+              <div class="user-chat d-flex border-top pt-2 ps-2">
+                <div class="icon-chat">
+                  <img
+                    src="./imgs/avatar_1.jpg"
+                    alt="avatar"
+                    class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                    width="60"
+                  />
+                </div>
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo messaggio inviato</p>
+                </div>
+                <div class="pt-1 ms-auto">
+                  <p class="small text-muted mb-1">12:00</p>
+                </div>
+              </div>
+              <!-- end card chat -->
+            </div>
+          </div>
+          <!-- Main container -->
+          <div
+            class="main-container d-flex flex-column justify-content-between"
+          >
+            <!-- Block #1 main user with access -->
+            <div
+              class="user-bar border d-flex align-items-center justify-content-between bg-color-sideuser p-2"
+            >
+              <!-- Photo + Name   -->
+              <div class="name">
+                <img
+                  src="./imgs/avatar_1.jpg"
+                  alt="avatar"
+                  class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                  width="60"
+                />
+
+                <div class="name-access">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo accesso oggi alle 12:00</p>
+                </div>
+              </div>
+              <!-- Icons -->
+              <div class="icon d-flex gap-3 pe-3 icon-size">
+                <i class="fa-solid fa-circle-notch" style="color: #b0b0b0"></i>
+                <i class="fa-solid fa-message" style="color: #b0b0b0"></i>
+                <i
+                  class="fa-solid fa-ellipsis-vertical"
+                  style="color: #b0b0b0"
+                ></i>
+              </div>
+            </div>
+
+            <!-- chat -->
+            <div
+              class="container bg-chat size-chat-container overflow-auto size-chat-container flex-grow-1"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
+              soluta, voluptas at temporibus velit facilis molestias laborum
+              nobis fugiat odio, atque optio! Quidem mollitia id illo ratione.
+              Beatae, quos cupiditate? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Exercitationem, non natus? Nobis, autem delectus
+              optio sapiente dolorum doloribus quibusdam provident quod tempora
+              quae? Dolor nam exercitationem, voluptatum eligendi nesciunt quam.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+              face Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Earum eius quo numquam corrupti mollitia autem in illo non, nam
+              exercitationem ratione error harum, dolore dolorem nostrum nisi
+              laborum. Numquam, id. Aliquid labore facere adipisci repellendus
+              veritatis eaque! Quas dicta beatae dolorum similique. Libero
+              necessitatibus natus iusto pariatur, perferendis deserunt
+              praesentium facere, architecto culpa est quae aspernatur quas
+              dolores tempore delectus. Explicabo odio ut suscipit quam eveniet
+              reiciendis fuga dolore reprehenderit sed, quaerat inventore
+              maiores qui. Consectetur quasi enim quisquam minima laborum
+              provident illo vitae temporibus. Repellat odio fugit dignissimos
+              repudiandae. Accusamus est illo commodi dolores sapiente esse.
+              Laboriosam, quos. Tenetur voluptatibus distinctio dolore earum
+              amet expedita magnam error id quibusdam perspiciatis iste, autem
+              assumenda atque. Eaque accusantium fuga fugit vitae? Facilis, vero
+              necessitatibus eligendi excepturi provident reprehenderit ad
+              recusandae! Distinctio aspernatur maxime qui quia fuga sed, rem
+              vitae ut dolorum veritatis consectetur velit molestiae? Dolorum
+              sint officia ad beatae exercitationem. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Perferendis illo fugit soluta
+              doloribus. Optio obcaecati excepturi doloremque omnis eligendi
+              magnam, laborum, ipsam commodi quo illum soluta ut, distinctio
+              veritatis sed? Recusandae autem nobis optio ut ipsam dignissimos
+              eligendi praesentium sed nemo accusantium id, officia numquam
+              culpa ea voluptates voluptate voluptas soluta minima! Reiciendis
+              excepturi quo mollitia totam quod sed repellendus! Quisquam
+              exercitationem quod neque, corrupti beatae quia animi voluptas?
+              Voluptatem culpa doloremque enim eum fuga eligendi similique vel,
+              repellendus commodi asperiores aut nulla architecto fugit labore
+              totam, libero adipisci? Illum. Enim ex distinctio aperiam
+              voluptates reprehenderit ullam qui assumenda voluptate nulla
+              recusandae unde, voluptas, earum harum explicabo consequuntur quia
+              quisquam corporis? Asperiores quas sint id atque dolorem officia?
+              Rerum, molestiae? Sequi cum doloribus earum rem, cupiditate
+              perferendis deleniti minima soluta, obcaecati corporis distinctio
+              asperiores similique dolorum! Incidunt repellendus assumenda
+              beatae placeat architecto laboriosam harum, nisi quam quo eaque,
+              consequatur sit!
+            </div>
+
+            <!-- Chat bar footer -->
+            <div class="chat-bar d-flex bg-color-sideuser p-2 gap-3">
+              <button class="btn btn-link">
+                <i
+                  class="fa-regular fa-face-smile icon-size"
+                  style="color: #8f8f8f"
+                ></i>
+              </button>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="form-control border-0"
+                placeholder="Scrivi un messsaggio"
+              />
+              <button class="btn btn-link">
+                <i
+                  class="fas fa-microphone icon-size"
+                  style="color: #8f8f8f"
+                ></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+l
+
+<!-- <div class="icon-chat d-flex align-items-center">
+                <img
+                  src="./imgs/avatar_1.jpg"
+                  alt="avatar"
+                  class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                  width="60"
+                />
+
+                <div class="pt-1">
+                  <p class="fw-bold mb-0">Michele</p>
+                  <p class="small text-muted">Ultimo accesso oggi alle 12:00</p>
+                </div>
+              </div>
+              <!-- right icons -->
+<!-- <div class="pt-1 ms-auto pe-3 d-flex gap-3 icon-size">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #b0b0b0"
+                ></i>
+                <i class="fa-solid fa-paperclip" style="color: #b0b0b0"></i>
+                <i
+                  class="fa-solid fa-ellipsis-vertical"
+                  style="color: #b0b0b0"
+                ></i>
+              </div>
+            </div> -->

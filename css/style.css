@@ -1,0 +1,70 @@
+.container-bg {
+    height: 100vh;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(219,219,211,1) 15%, rgba(219,219,211,1) 100%);
+}
+
+
+
+.background {
+    position: absolute;
+}
+.position-container {
+    position: relative;
+}
+
+.side-bar {
+    width: 60vh;
+    flex-shrink: 0;
+}
+
+.main-container {
+    width: 100vh;
+    flex-grow: 1;
+    
+}
+
+.user-img {
+    padding: 0.5rem;
+    width: 70px;
+    border-radius: 50%;
+
+}
+
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.bg-color-sideuser {
+    background-color: #eaeaea;
+}
+
+.bg-blue {
+    background-color: #8edafd;
+}
+
+.icon-bell i{
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .link-notification {
+    color: gray;
+  }
+
+
+
+.size-chat-container {
+    height: 60vh;
+}
+
+.icon-size {
+    font-size: 1.2rem;
+}
+
+.bg-chat {
+    background-image: url(/imgs/mine.jpg);
+}
+
+

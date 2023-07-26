@@ -178,8 +178,9 @@
                 name=""
                 id="myText"
                 class="form-control border-0"
-                placeholder="Scrivi un messaggio"
-                @keyup.enter=""
+                placeholder="Scrivi un messsaggio"
+                @keyup.enter="sendMessage"
+                v-model="message"
               />
 
               <button class="btn btn-link">

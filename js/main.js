@@ -83,6 +83,7 @@ const app = Vue.createApp({
         },
       ],
       currentContact: null,
+      message: "",
     };
   },
 
@@ -90,6 +91,17 @@ const app = Vue.createApp({
     onUserClick(singleContact) {
       this.currentContact = singleContact;
       console.log(singleContact);
+    },
+
+    sendMessage() {
+      const index = this.contactList.findIndex(
+        (contact) => contact.name == this.currentContact.name
+      );
+      this.contactList[index].messages.push({
+        data: new Date(),
+        message: this.message,
+        status: "sent",
+      });
     },
   },
 });
